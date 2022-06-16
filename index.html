@@ -25,9 +25,7 @@
 
       <!-- Section output -->
       <!-- TODO: Buatlah sebuah <ul> dengan id todo-output -->
-      <ul id="todo-output">
-
-      </ul>
+      <ul id="todo-output"></ul>
     </div>
 
     <!-- ! Untuk tantangan ini, script jangan diubah ke external js yah ! -->
@@ -41,17 +39,17 @@
       // Fungsi yang digunakan untuk menambahkan tulisan
       // Jangan ubah cara deklarasi fungsinya, cukup isi saja
       function fnClickHandler(toDoItem) {
-          let li = document.createElement('li');
-          li.innerHTML = `${input.value}`;
-
-
           const tombolHandler = toDoItem.key;
           if (tombolHandler === "Enter") 
           {
+            let li = document.createElement('li');
+            li.innerHTML = `${input.value}`;
             output.append(li);
             input.value = "";
             input.focus();
           } else if (toDoItem.which === 1){
+            let li = document.createElement('li');
+            li.innerHTML = `${input.value}`;
             output.append(li);
             input.value = "";
             input.focus();

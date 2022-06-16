@@ -40,16 +40,16 @@
       // Jangan ubah cara deklarasi fungsinya, cukup isi saja
       function fnClickHandler(toDoItem) {
           const tombolHandler = toDoItem.key;
-          if (tombolHandler === "Enter") 
+          let li = document.createElement('li');
+          li.innerHTML = input.value;
+
+          if (toDoItem.which === 1) 
           {
-            let li = document.createElement('li');
-            li.innerHTML = `${input.value}`;
+            
             output.append(li);
             input.value = "";
             input.focus();
-          } else if (toDoItem.which === 1){
-            let li = document.createElement('li');
-            li.innerHTML = `${input.value}`;
+          } else if (tombolHandler === "Enter"){ 
             output.append(li);
             input.value = "";
             input.focus();
